@@ -34,7 +34,7 @@ python fullprocess.py
 
 The bundled Flask server is intended for local or controlled workspace use. Add authentication and restrict file access before exposing it to an untrusted network.
 
-## Current deployment state
+## Archived local deployment state
 
 The configured source batches score `0.6923076923` with the deployed model, above the stored deployment score of `0.5714285714`. The automation therefore preserves the existing deployment. The numbered API and confusion-matrix files are second snapshots of that unchanged deployment.
 

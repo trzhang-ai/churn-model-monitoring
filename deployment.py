@@ -24,7 +24,7 @@ ingest_file_path = _project_path(config["output_folder_path"]) / "ingestedfiles.
 prod_deployment_path = _project_path(config["prod_deployment_path"])
 
 
-def store_model_into_pickle():
+def deploy_artifacts():
     """Copy the model, score, and ingestion manifest to the deployment directory."""
     prod_deployment_path.mkdir(parents=True, exist_ok=True)
     copied_files = []
@@ -33,5 +33,10 @@ def store_model_into_pickle():
     return copied_files
 
 
+def store_model_into_pickle():
+    """Compatibility entry point for the original project interface."""
+    return deploy_artifacts()
+
+
 if __name__ == "__main__":
-    store_model_into_pickle()
+    deploy_artifacts()

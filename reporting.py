@@ -26,7 +26,7 @@ def _project_path(value):
     return path if path.is_absolute() else PROJECT_ROOT / path
 
 
-def score_model(dataset_path=None, cm_plot_path=None):
+def generate_confusion_matrix(dataset_path=None, cm_plot_path=None):
     """Generate and save a confusion matrix for the deployed model."""
     dataset_path = Path(dataset_path) if dataset_path else (
         _project_path(config["test_data_path"]) / "testdata.csv"
@@ -47,5 +47,10 @@ def score_model(dataset_path=None, cm_plot_path=None):
     return str(cm_plot_path)
 
 
+def score_model(dataset_path=None, cm_plot_path=None):
+    """Compatibility entry point for the original project interface."""
+    return generate_confusion_matrix(dataset_path, cm_plot_path)
+
+
 if __name__ == "__main__":
-    score_model()
+    generate_confusion_matrix()

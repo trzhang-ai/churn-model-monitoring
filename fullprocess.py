@@ -9,9 +9,9 @@ import time
 from glob import glob
 from pathlib import Path
 
-from deployment import store_model_into_pickle
+from deployment import deploy_artifacts
 from ingestion import merge_multiple_dataframe
-from reporting import score_model as report_model
+from reporting import generate_confusion_matrix
 from scoring import score_model
 from training import train_model
 
@@ -119,8 +119,8 @@ def main():
 
     train_model()
     score_model()
-    store_model_into_pickle()
-    report_model(
+    deploy_artifacts()
+    generate_confusion_matrix(
         cm_plot_path=(
             _project_path(config["output_model_path"]) / "confusionmatrix2.png"
         )
