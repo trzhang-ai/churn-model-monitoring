@@ -1,0 +1,1 @@
+*/10 * * * * cd /workspace/cd0583-project-starter-file && /opt/conda/envs/ml/bin/python /workspace/cd0583-project-starter-file/fullprocess.py >> /workspace/cd0583-project-starter-file/fullprocess.log 2>&1

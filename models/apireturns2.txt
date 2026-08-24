@@ -1,0 +1,89 @@
+{
+  "/prediction": {
+    "predictions": [
+      0,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "/scoring": 0.5714285714285714,
+  "/summarystats": [
+    {
+      "statistic": "mean",
+      "values": {
+        "exited": 0.5,
+        "lastmonth_activity": 5625.923076923077,
+        "lastyear_activity": 763.5384615384615,
+        "number_of_employees": 457.46153846153845
+      }
+    },
+    {
+      "statistic": "median",
+      "values": {
+        "exited": 0.5,
+        "lastmonth_activity": 425.0,
+        "lastyear_activity": 97.5,
+        "number_of_employees": 99.0
+      }
+    },
+    {
+      "statistic": "mode",
+      "values": {
+        "exited": 0.0,
+        "lastmonth_activity": 0.0,
+        "lastyear_activity": 0.0,
+        "number_of_employees": 2.0
+      }
+    }
+  ],
+  "/diagnostics": {
+    "dependencies_check": [
+      {
+        "installed_version": "3.1.3",
+        "latest_version": "3.1.3",
+        "module_name": "Flask"
+      },
+      {
+        "installed_version": "26.0.0",
+        "latest_version": "26.0.0",
+        "module_name": "gunicorn"
+      },
+      {
+        "installed_version": "3.10.0",
+        "latest_version": "3.10.0",
+        "module_name": "matplotlib"
+      },
+      {
+        "installed_version": "2.3.3",
+        "latest_version": "2.3.3",
+        "module_name": "pandas"
+      },
+      {
+        "installed_version": "2.34.2",
+        "latest_version": "2.34.2",
+        "module_name": "requests"
+      },
+      {
+        "installed_version": "1.9.0",
+        "latest_version": "1.9.0",
+        "module_name": "scikit-learn"
+      }
+    ],
+    "missing_data": {
+      "exited": 0.0,
+      "lastmonth_activity": 0.0,
+      "lastyear_activity": 0.0,
+      "number_of_employees": 0.0
+    },
+    "timing": [
+      {
+        "data_ingestion_time": 0.5771143329329789
+      },
+      {
+        "model_training_time": 1.5166005839128047
+      }
+    ]
+  }
+}
