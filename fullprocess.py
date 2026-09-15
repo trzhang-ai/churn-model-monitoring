@@ -1,4 +1,4 @@
-"""Run data ingestion, drift detection, and conditional redeployment."""
+"""Run ingestion, detect F1 decline, and conditionally redeploy."""
 
 import json
 import os

@@ -1,6 +1,11 @@
-# Dynamic Risk Assessment System
+# Churn Model Monitoring
 
 This repository contains an end-to-end monitoring workflow for a client-churn classifier. The system ingests new data, evaluates the deployed model, exposes operational diagnostics, and retrains only when F1 performance declines.
+
+The trigger compares labeled-batch F1 with a stored baseline. It monitors
+predictive performance; it does not independently test feature-distribution
+shift or establish concept drift. The legacy response status
+`new_data_no_drift` means that F1 did not fall below the stored baseline.
 
 ## Architecture
 
@@ -24,7 +29,7 @@ From a second terminal, collect the endpoint responses:
 python apicalls.py
 ```
 
-Run the complete ingestion and drift-evaluation workflow with:
+Run the complete ingestion and performance-evaluation workflow with:
 
 ```bash
 python fullprocess.py
