@@ -1,1 +1,3 @@
-*/10 * * * * cd /workspace/cd0583-project-starter-file && /opt/conda/envs/ml/bin/python /workspace/cd0583-project-starter-file/fullprocess.py >> /workspace/cd0583-project-starter-file/fullprocess.log 2>&1
+# Example schedule: run the monitoring workflow every ten minutes.
+# Replace /path/to/churn-model-monitoring and the Python path for your environment.
+*/10 * * * * cd /path/to/churn-model-monitoring && python fullprocess.py >> fullprocess.log 2>&1

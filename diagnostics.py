@@ -86,7 +86,7 @@ def execution_time():
     configured_input = _project_path(config["input_folder_path"])
     configured_test = _project_path(config["test_data_path"])
 
-    with tempfile.TemporaryDirectory(prefix="cd0583-diagnostics-") as temp_directory:
+    with tempfile.TemporaryDirectory(prefix="churn-diagnostics-") as temp_directory:
         temp_root = Path(temp_directory)
         temp_input = temp_root / "input"
         temp_input.mkdir()
